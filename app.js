@@ -4,13 +4,18 @@ const vm = Vue.createApp({
       firstName: 'John',
       lastName: 'Doe'
     }
+  },
+  methods: {
+    fullName() {
+      return `${this.firstName} ${this.lastName.toUpperCase()}`
+    }
   }
 }).mount('#app')
 
 // access to the Vue instance Data
-setTimeout(() => {
-  vm.firstName = 'Bob'
-}, 2000)
+// setTimeout(() => {
+//   vm.firstName = 'Bob'
+// }, 2000)
 // second instance
 // Vue.createApp({
 //   data() {
