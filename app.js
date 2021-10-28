@@ -1,4 +1,4 @@
-Vue.createApp({
+const vm = Vue.createApp({
   data() {
     return {
       firstName: 'John',
@@ -6,12 +6,17 @@ Vue.createApp({
     }
   }
 }).mount('#app')
+
+// access to the Vue instance Data
+setTimeout(() => {
+  vm.firstName = 'Bob'
+}, 2000)
 // second instance
-Vue.createApp({
-  data() {
-    return {
-      firstName: 'Simo',
-      lastName: 'Tae'
-    }
-  }
-}).mount('#test')
+// Vue.createApp({
+//   data() {
+//     return {
+//       firstName: 'Simo',
+//       lastName: 'Tae'
+//     }
+//   }
+// }).mount('#test')
